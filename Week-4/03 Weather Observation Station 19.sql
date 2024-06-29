@@ -1,1 +1,2 @@
-select round(sqrt(power((a-b),2) + power((c-d),2)),4) from ( select max(lat_n) as a , min(lat_n) as b , max(long_w) as c , min(long_w) as d from station ) station
+SELECT ROUND(SQURT(POWER((a-b),2) + POWER((c-d),2)),4)
+  FROM ( SELECT MAX(lat_n) AS a ,MIN(lat_n) AS b , MAX(long_w) AS c , MIN(long_w) AS d FROM STATION ) STATION
