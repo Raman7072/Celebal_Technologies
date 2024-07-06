@@ -1,4 +1,4 @@
-# Pandas is used for small data
+#Pandas is used for small data
 
 import pandas as pd
 import sqlite3
