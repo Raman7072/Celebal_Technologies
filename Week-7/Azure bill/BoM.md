@@ -75,4 +75,4 @@ Azure Integration Runtime: **_$72.00_**
 Azure SQL Database: **_$750.00_**
 Azure Data Lake Storage Gen2: **_$1.14_**
 Data Transfer: **_$0.00_**
-#### Total: $856.89 per month
+### Total: $856.89 per month
