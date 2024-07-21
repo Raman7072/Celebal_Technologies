@@ -68,3 +68,11 @@ Operations: Estimate 100,000 operations per month.
 
 ## 5. Data Transfer:
 ### Inbound Data Transfer: Typically free within Azure, but ensure no hidden costs.
+
+# Total Estimated Monthly Cost
+Azure Data Factory: **_$33.75_**
+Azure Integration Runtime: **_$72.00_**
+Azure SQL Database: **_$750.00_**
+Azure Data Lake Storage Gen2: **_$1.14_**
+Data Transfer: **_$0.00_**
+#### Total: $856.89 per month
