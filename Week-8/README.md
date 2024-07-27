@@ -1,7 +1,7 @@
 # Task 02
-
+```
 dbutils.fs.cp("file:/<local-file-path>", "dbfs:/<destination-path>")
-
+```
 ## 1.Load the dataset into a DataFrame
 ```
 file_path = "dbfs:/<destination-path>"
