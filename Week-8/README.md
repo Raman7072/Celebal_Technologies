@@ -35,8 +35,8 @@ external_table_path = "dbfs:/<external-table-path>"
 flat_df.write.mode("overwrite").parquet(external_table_path)
 
 spark.sql(f"""
-CREATE TABLE IF NOT EXISTS flattened_table
-USING PARQUET
-LOCATION '{external_table_path}'
+    CREATE TABLE IF NOT EXISTS flattened_table
+    USING PARQUET
+    LOCATION '{external_table_path}'
 """)
 ```
