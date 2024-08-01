@@ -1,9 +1,7 @@
 # Task 01
 ## 1: Load the Customer Dataset 
-```
-import pandas as pd
-```
-    Load customer dataset
+    import pandas as pd
+#Load customer dataset
 ```
 customer_data = pd.read_csv('customers.csv')
 print(customer_data.head())
