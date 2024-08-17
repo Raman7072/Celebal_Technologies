@@ -75,5 +75,5 @@ After running the insert statements, the `CustomerDim` table will look like this
 | 3          | Bob Smith     | Chennai     | 2023-09-11         | 9999-12-31       | 1         |
 | 4          | David Richard | Mumbai      | 2023-09-11         | 9999-12-31       | 1         |
 | 5          | Eva Dsouza    | Mumbai      | 2023-09-11         | 9999-12-31       | 1         |
-<sup>__________________________________________________________________________________________</sup>
 ```
+<sup>______________________________________________________________________</sup>
