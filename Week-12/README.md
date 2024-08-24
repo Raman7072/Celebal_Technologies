@@ -61,7 +61,7 @@ CREATE CATALOG my_catalog;
 %sql
 CREATE SCHEMA my_catalog.my_schema;
 ```
-3. Create a managed table:
+2. Create a managed table:
 ```
 %sql
 CREATE TABLE my_catalog.my_schema.my_managed_table (
