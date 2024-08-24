@@ -1,5 +1,5 @@
 ## 1. Set Up Unity Catalog Metastore in an Azure Databricks Environment
-### 1.1. Prerequisites:
+### - Prerequisites:
 - Ensure you have access to an Azure subscription and a Databricks workspace.
 - Ensure you have the necessary Azure roles (`Owner` or `Contributor`) to create and manage resources.
 - Databricks Premium Plan is required for Unity Catalog.
