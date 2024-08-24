@@ -52,23 +52,23 @@
 ### 5.1. Create a Catalog:
 - In the Databricks SQL Editor, execute the following command:
 ```
-    %sql
-    CREATE CATALOG my_catalog;
+%sql
+CREATE CATALOG my_catalog;
 ```
 ## 5.2. Create a Managed Table:
 1. Create a schema in the catalog:
 ```
-    %sql
-    CREATE SCHEMA my_catalog.my_schema;
+%sql
+CREATE SCHEMA my_catalog.my_schema;
 ```
 3. Create a managed table:
 ```
-    %sql
-    CREATE TABLE my_catalog.my_schema.my_managed_table (
-        id INT,
-        name STRING,
-        created_at TIMESTAMP
-    );
+%sql
+CREATE TABLE my_catalog.my_schema.my_managed_table (
+    id INT,
+    name STRING,
+    created_at TIMESTAMP
+);
 ```
 
 ## 6. Create External Table
@@ -76,39 +76,41 @@
 1. Ensure you have data in your storage account.
 2. Execute the following SQL commands:
 ```
-    %sql
-    CREATE EXTERNAL TABLE my_catalog.my_schema.my_external_table
-    USING delta
-    LOCATION 'abfss://<container_name>@<storage_account_name>.dfs.core.windows.net/path/to/data/';
+%sql
+CREATE EXTERNAL TABLE my_catalog.my_schema.my_external_table
+USING delta
+LOCATION 'abfss://<container_name>@<storage_account_name>.dfs.core.windows.net/path/to/data/';
 ```
 
 ## 7. Provide Row-Level Security and Column-Level Filtering Using the Dynamic View
 ### 7.1. Create a Dynamic View for Row-Level Security:
 - Create a view that filters data based on user roles:
 ```
-    %sql
-    CREATE OR REPLACE VIEW my_catalog.my_schema.secure_view AS
-    SELECT *
-    FROM my_catalog.my_schema.my_table
-    WHERE CASE
-        WHEN CURRENT_USER() = 'admin_user' THEN TRUE
-        WHEN CURRENT_USER() = 'user1' AND id = 1 THEN TRUE
-        ELSE FALSE
-    END;
+%sql
+CREATE OR REPLACE VIEW my_catalog.my_schema.secure_view AS
+SELECT *
+FROM my_catalog.my_schema.my_table
+WHERE CASE
+    WHEN CURRENT_USER() = 'admin_user' THEN TRUE
+    WHEN CURRENT_USER() = 'user1' AND id = 1 THEN TRUE
+    ELSE FALSE
+END;
 ```
 ### 7.2. Create a Dynamic View for Column-Level Security:
 - Create a view that filters columns based on user roles:
 ```
-    CREATE OR REPLACE VIEW my_catalog.my_schema.secure_column_view AS
-    SELECT
-        CASE WHEN CURRENT_USER() = 'admin_user' THEN id ELSE NULL END AS id,
-        name,
-        created_at
-    FROM my_catalog.my_schema.my_table;
+%sql
+CREATE OR REPLACE VIEW my_catalog.my_schema.secure_column_view AS
+SELECT
+    CASE WHEN CURRENT_USER() = 'admin_user' THEN id ELSE NULL END AS id,
+    name,
+    created_at
+FROM my_catalog.my_schema.my_table;
 ```
 ### 7.3. Grant Permissions on the Views:
 - Grant the necessary permissions to users or groups:
 ```
-    GRANT SELECT ON my_catalog.my_schema.secure_view TO `user1`;
-    GRANT SELECT ON my_catalog.my_schema.secure_column_view TO `user1`;
+%sql
+GRANT SELECT ON my_catalog.my_schema.secure_view TO `user1`;
+GRANT SELECT ON my_catalog.my_schema.secure_column_view TO `user1`;
 ```
