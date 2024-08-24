@@ -6,11 +6,11 @@
 
 ## 2. Create the Root Storage Account for the Metastore
 ### 2.1. Create an Azure Storage Account:
-    1. Go to the `Azure portal` and select Storage accounts.
-    2. Click on + **Create** and configure the following:
-        - **Subscription:** Choose your subscription.
-        - **Resource group:** Create a new resource group or use an existing one.
-        - **Storage account name:** Enter a unique name for the storage account.
-        - **Region:** Select the region that matches your Databricks workspace.
-        - **Performance:** Standard.
-        - **Redundancy:** Locally-redundant storage (LRS) is sufficient.
+1. Go to the `Azure portal` and select Storage accounts.
+2. Click on + **Create** and configure the following:
+  - **Subscription:** Choose your subscription.
+  - **Resource group:** Create a new resource group or use an existing one.
+  - **Storage account name:** Enter a unique name for the storage account.
+  - **Region:** Select the region that matches your Databricks workspace.
+  - **Performance:** Standard.
+  - **Redundancy:** Locally-redundant storage (LRS) is sufficient.
