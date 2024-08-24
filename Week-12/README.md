@@ -72,7 +72,6 @@ CREATE TABLE my_catalog.my_schema.my_managed_table (
 ```
 
 ## 6. Create External Table
-### - Create an External Table:
 1. Ensure you have data in your storage account.
 2. Execute the following SQL commands:
 ```
