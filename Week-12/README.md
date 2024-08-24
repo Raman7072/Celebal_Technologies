@@ -44,7 +44,7 @@
     - **Root S3 Path:** Use the Azure storage account and container path (e.g., `abfss://unity_catalog_root@<storage_account_name>.dfs.core.windows.net/`).
     - **Region:** Select the same region as your Databricks workspace.
 3. Click on **Create**.
-## 4.3. Assign the Metastore to the Databricks Workspace:
+### 4.3. Assign the Metastore to the Databricks Workspace:
 1. Go to **Workspaces** > Select your workspace.
 2. In the **Metastore** field, select the newly created metastore.
 
@@ -55,7 +55,7 @@
 %sql
 CREATE CATALOG my_catalog;
 ```
-## 5.2. Create a Managed Table:
+### 5.2. Create a Managed Table:
 1. Create a schema in the catalog:
 ```
 %sql
@@ -72,7 +72,7 @@ CREATE TABLE my_catalog.my_schema.my_managed_table (
 ```
 
 ## 6. Create External Table
-### 6.1. Create an External Table:
+### - Create an External Table:
 1. Ensure you have data in your storage account.
 2. Execute the following SQL commands:
 ```
