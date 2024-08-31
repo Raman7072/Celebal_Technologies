@@ -8,11 +8,11 @@ Each notebook will read from the same source table and perform insert/update ope
 
 # 2. Create an Orchestration Notebook Using `dbutils`
 The orchestration notebook will call the other notebooks sequentially.
-    Orchestrator_Sequential
+    - Orchestrator_Sequential
 
 # 3. Create a Parallel Orchestration Notebook
 This notebook will call the other notebooks in parallel using concurrent.futures or similar methods.
-    Orchestrator_Parallel
+    - Orchestrator_Parallel
 
 # 4. Create Jobs Using Databricks Jobs API
 You can create jobs for both the sequential and parallel orchestrators using the Databricks Jobs API.
