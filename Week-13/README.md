@@ -1,19 +1,18 @@
 # 1. Create 4 Notebooks for Inserting/Updating Data
 Each notebook will read from the same source table and perform insert/update operations on 5 respective output Delta tables.
-```
-Notebook-01
-Notebook-02
-Notebook-03
-Notebook-04
-```
+
+- Notebook-01
+- Notebook-02
+- Notebook-03
+- Notebook-04
 
 # 2. Create an Orchestration Notebook Using `dbutils`
 The orchestration notebook will call the other notebooks sequentially.
-`Orchestrator_Sequential`
+    Orchestrator_Sequential
 
 # 3. Create a Parallel Orchestration Notebook
 This notebook will call the other notebooks in parallel using concurrent.futures or similar methods.
-`Orchestrator_Parallel`
+    Orchestrator_Parallel
 
 # 4. Create Jobs Using Databricks Jobs API
 You can create jobs for both the sequential and parallel orchestrators using the Databricks Jobs API.
